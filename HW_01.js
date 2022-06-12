@@ -1,56 +1,42 @@
-let yolochka4 = 4;
-let yolochka6 = 6;
-let yolochka_name = "zelyonaya"
+let item_1
+item_1 = 5
+console.log(item_1)
 
-let result = yolochka4 + yolochka6;
-let result_2 = yolochka6 + yolochka_name;
+let item_2 = 3
+console.log(item_2)
 
-// console.log(`result + ${yolochka4 + yolochka6}`)
+let item_3 = item_1 + item_2
+console.log(item_3)
 
-// console.log(result);
-// console.log(result_2);
+let item_4 = "Yolochka"
+console.log(item_4)
 
-let t = true
-let f = false
+console.log(item_3 + item_4)
 
-// console.log(t + f)
+console.log(item_3 * item_4)
 
-if (f) {
-    let igolochka = 3+5
-    console.log("if true = " + igolochka)
+let item_5 = item_3
+
+let item_6 = 15
+let item_6_type = typeof 15
+
+console.log(item_6 == 15, item_6_type == typeof 15)
+
+let item_7 = String(item_6)
+let item_7_type = typeof item_7
+
+console.log(item_7 == String(item_6), item_7_type == typeof item_7)
+
+let age_1 = 10
+let age_2 = 18
+let age_3 = 60
+
+if (age_1 < age_2) {
+    console.log(("You don't have access 'cause your age is " + age_1) + (". It's less then " + age_2))
+} if (age_1 >= age_2 && age_1 < age_3) {
+    console.log("Welcome!")
+} if (age_1 > age_3) {
+    console.log("Keep calm and look 'Culture channel'")
 } else {
-    let shishka = 2+2
-    console.log("if not true = " + shishka)
-}
-
-
-if (yolochka4 + yolochka6 == 10) {
-    let igolochka = 3+5
-    console.log("if true = " + igolochka)
-}
-else if (f) {
-    let shishka = 2
-    console.log("else if = " + shishka)
-} else {
-    let sprout = 2+2
-    console.log("if not true = " + sprout)
-}
-
-let age = "18";
-
-if (typeof(age) == "number") {
-if (age >= 18 && age <= 60) {
-
-    console.log("Full content")
-}
-else if (age < 18) {
-
-    console.log("Cartoons")
-}
-else if (age > 60) {
-    console.log("Culture")
-
-}
-} else {
-    console.log("Good luck!")
+    console.log("Technical work")
 }
