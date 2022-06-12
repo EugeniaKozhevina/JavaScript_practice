@@ -1,9 +1,19 @@
+// 1. Создать переменную “item_1”
 let item_1
+
+// 2. Присвоить переменной item_1 цифру 5
 item_1 = 5
+
+// 3. Вывести в консоль item_1
 console.log(item_1)
+
+/* 4. Создать переменную “item_2”
+5. Присвоить переменной item_2 цифру 3 */
 
 let item_2 = 3
 console.log(item_2)
+
+// 6. Вывести в консоль item_2
 
 let item_3 = item_1 + item_2
 console.log(item_3)
