@@ -75,7 +75,7 @@ console.log('item_7 ==', String(item_6),", ",'item_7_type ==', typeof item_7)
     31. Если age_1 < age_2, вывести в консоль “You don’t have access 'cause your age is ” + age_1 + “ It’s less than ”
     32. Если age_1 >=  age_2 и age_1 <  age_3, вывести в консоль “Welcome!”
     33. Если age_1  >= age_3, вывести в консоль “Keep calm and watch Culture channel”
-    34. Иначе выводите “Technical work” */
+    34. Иначе выводите “Technical works” */
 
 let age_1 = 10
 let age_2 = 18
@@ -88,5 +88,75 @@ if (age_1 < age_2) {
 } else if (age_1 >= age_3) {
     console.log("Keep calm and watch 'Culture channel'")
 } else {
-    console.log("Technical work")
+    console.log("Technical works")
 }
+
+    // 35. Преобразовать код из 27-34 пунктов в функцию, принимающую на вход возраст.
+    Вывести в консоль результат работы функции с проверочными значениями для границ 18 и 60 лет */
+
+let age_1 = 18
+let age_2 = 60
+
+const checkAge = function(age) {
+    if (age < age_1) {
+        console.log("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
+    } else if (age >= age_1 && age < age_2) {
+        console.log("Welcome!")
+    } else if (age >= age_2) {
+        console.log("Keep calm and watch 'Culture channel'")
+    } else {
+        console.log("Technical works")
+    }
+}
+
+checkAge(18)
+checkAge(60)
+checkAge(17)
+checkAge(19)
+checkAge(59)
+checkAge(61)
+
+    // 36. Преобразовать п. 35 таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - отображалась ошибка.
+
+let age_1 = 18
+let age_2 = 60
+
+const checkAge = function(age) {
+    if (typeof age == "number") {
+        if (age < age_1) {
+            console.log("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
+        } else if (age >= age_1 && age < age_2) {
+            console.log("Welcome!")
+        } else if (age >= age_2) {
+            console.log("Keep calm and watch 'Culture channel'")
+        } else {
+            console.log("Technical works")
+        }
+    } else  {console.log("Field must contain only numbers")}
+    }
+
+checkAge(18)
+checkAge("eighteen")
+
+    // 37. Преобразовать п. 36 таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number.
+
+let age_1 = 18
+let age_2 = 60
+
+const checkAge = function(age) {
+    if (!isNaN(age)) {
+        if (age < age_1) {
+            console.log("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
+        } else if (age >= age_1 && age < age_2) {
+            console.log("Welcome!")
+        } else if (age >= age_2) {
+            console.log("Keep calm and look 'Culture channel'")
+        } else {
+            console.log("Technical work")
+        }
+    } else  {console.log("Field must contain only numbers")}
+}
+
+checkAge(60)
+checkAge("60")
+checkAge("sixty")
