@@ -91,7 +91,7 @@ if (age_1 < age_2) {
     console.log("Technical works")
 }
 
-    /* 35. Преобразовать код из 27-34 пунктов в функцию, принимающую на вход возраст.
+    /* 35.* Преобразовать код из 27-34 пунктов в функцию, принимающую на вход возраст.
     Вывести в консоль результат работы функции с проверочными значениями для границ 18 и 60 лет */
 
 let age_1 = 18
@@ -116,7 +116,7 @@ checkAge(19)
 checkAge(59)
 checkAge(61)
 
-    // 36. Преобразовать п. 35 таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - отображалась ошибка.
+    // 36.* Преобразовать п. 35 таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - отображалась ошибка.
 
 let age_1 = 18
 let age_2 = 60
@@ -139,14 +139,18 @@ checkAge(18)
 checkAge("18")
 checkAge("eighteen")
 
-    // 37. Преобразовать п. 36 таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number.
+    // 37.** Преобразовать п. 36 таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number.
+    // + добавила условие обработки отрицательного значения.
 
+let age_0 = 0
 let age_1 = 18
 let age_2 = 60
 
 const checkAge = function(age) {
     if (age && !isNaN(age)) {
-        if (age < age_1) {
+        if (age < age_0) {
+            console.log("Value cannot be negative number")
+        } else if (age < age_1) {
             console.log("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
         } else if (age >= age_1 && age < age_2) {
             console.log("Welcome!")
@@ -163,3 +167,27 @@ checkAge("18")
 checkAge("eighteen")
 checkAge("0")
 checkAge("")
+checkAge(-1)
+
+    // 38.** Преобразовать задание 37 таким образом, чтобы возраст вводился с использованием функции prompt в привязанной верстке.
+    // + приложила файл HW_01_task38.html
+
+let age_1 = 18
+let age_2 = 60
+
+const checkAge = function(age) {
+    if (age && !isNaN(age)) {
+        if (age < age_1) {
+            alert("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
+        } else if (age >= age_1 && age < age_2) {
+            alert("Welcome!")
+        } else if (age >= age_2) {
+            alert("Keep calm and watch 'Culture channel'")
+        } else {
+            alert("Technical works")
+        }
+    } else alert("Not a valid value")
+}
+
+let age_prompt = prompt("Please, enter your age")
+checkAge(age_prompt)
