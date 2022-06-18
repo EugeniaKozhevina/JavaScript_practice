@@ -91,7 +91,7 @@ if (age_1 < age_2) {
     console.log("Technical works")
 }
 
-    // 35. Преобразовать код из 27-34 пунктов в функцию, принимающую на вход возраст.
+    /* 35. Преобразовать код из 27-34 пунктов в функцию, принимающую на вход возраст.
     Вывести в консоль результат работы функции с проверочными значениями для границ 18 и 60 лет */
 
 let age_1 = 18
@@ -132,10 +132,11 @@ const checkAge = function(age) {
         } else {
             console.log("Technical works")
         }
-    } else  {console.log("Field must contain only numbers")}
-    }
+    } else console.log("Not a valid value")
+}
 
 checkAge(18)
+checkAge("18")
 checkAge("eighteen")
 
     // 37. Преобразовать п. 36 таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number.
@@ -144,19 +145,21 @@ let age_1 = 18
 let age_2 = 60
 
 const checkAge = function(age) {
-    if (!isNaN(age)) {
+    if (age && !isNaN(age)) {
         if (age < age_1) {
             console.log("You don't have access 'cause your age is " + age + ". It's less than " + age_1)
         } else if (age >= age_1 && age < age_2) {
             console.log("Welcome!")
         } else if (age >= age_2) {
-            console.log("Keep calm and look 'Culture channel'")
+            console.log("Keep calm and watch 'Culture channel'")
         } else {
-            console.log("Technical work")
+            console.log("Technical works")
         }
-    } else  {console.log("Field must contain only numbers")}
+    } else console.log("Not a valid value")
 }
 
-checkAge(60)
-checkAge("60")
-checkAge("sixty")
+checkAge(18)
+checkAge("18")
+checkAge("eighteen")
+checkAge("0")
+checkAge("")
