@@ -33,7 +33,27 @@ printLaugh("ha", 8)
           e.g. function getWordStructure(word)
           В консоли:
           Слово (word) состоит из  (число) гласных и (число) согласных букв
-          Проверки: 'case', 'Case', 'Check-list' */
+          Проверки: 'checklist', 'Test-case' */
+
+let vowels = "aeiuoy".split('')
+let consonants = "bcdfghjklmnpqrstvwxyz".split('')
+let numberOfVowels = 0
+let numberOfConsonants = 0
+
+function getWordStructure(word) {
+word = word.toLowerCase()
+for (let n = 0; n < word.length; n++) {
+    if (vowels.includes(word[n])) {
+        numberOfVowels++
+    } else if (consonants.includes(word[n])) {
+        numberOfConsonants++
+    }
+}
+console.log("Слово " + word + " состоит из " + numberOfVowels + " гласных и " + numberOfConsonants + " согласных букв.")
+}
+
+getWordStructure("checklist")
+getWordStructure("Test-case")
 
   // 4.* Написать функцию, которая проверяет, является ли слово палиндромом
   //     e.g. function isPalindrom(word)
