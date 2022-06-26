@@ -72,3 +72,18 @@ function palindrom(word) {
 
 palindrom("довод")
 palindrom("аргумент")
+
+  // вариант 2
+
+function palindrom(word) {
+    word = word.toLowerCase().split(" ").join("")
+    let checkWord = word.length
+    for (let n = 0; n < checkWord / 2; n++) {
+        if (word[n] !== word[checkWord - 1 - n]) {
+            return word + " - не палиндром"
+        }
+    }
+    return word + " - палиндром"
+}
+console.log(palindrom("ДоВОд"))
+console.log(palindrom("Аргумент"))
