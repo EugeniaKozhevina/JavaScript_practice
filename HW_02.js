@@ -56,5 +56,19 @@ getWordStructure("checklist")
 getWordStructure("Test-case")
 
   // 4.* Написать функцию, которая проверяет, является ли слово палиндромом
-  //     e.g. function isPalindrom(word)
-  //     Проверки: 'abba', 'Abba'
+  //     e.g. function palindrom(word)
+
+function palindrom(word) {
+    let checkWord = ""
+    for (n = word.length - 1; n >= 0; n --) {
+        checkWord = checkWord + word[n]
+    }
+    if (word.toLowerCase() == checkWord.toLowerCase()) {
+        console.log(word + " - палиндром")
+    } else  {
+        console.log(word + " - не палиндром")
+    }
+}
+
+palindrom("довод")
+palindrom("аргумент")
