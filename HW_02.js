@@ -63,15 +63,16 @@ function palindrom(word) {
     for (n = word.length - 1; n >= 0; n --) {
         checkWord = checkWord + word[n]
     }
-    if (word.toLowerCase() == checkWord.toLowerCase()) {
+    if (word.toLowerCase().split(" ").join("") == checkWord.toLowerCase().split(" ").join("")) {
         console.log(word + " - палиндром")
     } else  {
         console.log(word + " - не палиндром")
     }
 }
 
-palindrom("довод")
-palindrom("аргумент")
+palindrom("Довод")
+palindrom("Аргумент")
+palindrom("А Роза Упала На Лапу Азора")
 
   // вариант 2
 
