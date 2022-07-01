@@ -82,6 +82,11 @@ const users = [
     },
 ];
 
+const user = users.filter(value => (value.registrationDate == '09.10.2021' || value.registrationDate == '10.10.2021'))
+console.log(user)
+
+// вариант через функцию с возможностью подставить любые значения:
+
 function findUsersByRegDate(date_1, date_2) {
     return users.filter(value => (value.registrationDate == date_1 || value.registrationDate == date_2))
 }
