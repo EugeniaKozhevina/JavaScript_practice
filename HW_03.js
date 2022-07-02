@@ -95,12 +95,12 @@ console.log(findUserRegDate('09.10.2021', '10.10.2021'))
 
 
 /* Task 2*
-   Откройте в VSCode task_2.json файл. Скопируйте из него JSONку, вставьте в свой код (присвоив в переменную).
+   Реализуйте считывание из JSONки из файла HW_03_task2.json с помощью, например, модуля fs.
    Дан массив объектов. Каждый объект является идентификационной карточкой человека. Нам нужно хранить только уникальные значения в этом массиве.
    Реализуйте функцию, которая будет выполнять эту работу. */
 
 const fs = require("fs")
-let personalData = JSON.parse(fs.readFileSync("task_2.json"))
+let personalData = JSON.parse(fs.readFileSync("HW_03_task2.json"))
 
 function uniqueData() {
     let object = []
@@ -115,11 +115,3 @@ console.log(uniqueData())
 
 let uniqueData = Array.from(new Set(user.map((item) => JSON.stringify(item)))).map((item) => JSON.parse(item))
 console.log(uniqueData)
-
-
-
-/* Task 2***
-   Реализуйте считывание из JSONки из файла task_2.json с помощью, например, модуля fs. для дальнейшего использования в функции, описанной в задании */
-
-/* Task 3**
-   В файле task_3.txt найдите структуру компании и задания, которые необходимо выполнить. */
